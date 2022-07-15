@@ -156,7 +156,7 @@ function callActivatedHooks(queue) {
  */
 export function queueWatcher(watcher: Watcher) {
   const id = watcher.id
-  if (has[id] != null) {
+  if (id !== Infinity && has[id] != null) {
     return
   }
 
