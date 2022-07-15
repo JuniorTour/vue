@@ -313,7 +313,7 @@ function doWatch(
   if (flush === 'sync') {
     watcher.update = watcher.run
   } else if (flush === 'post') {
-    //watcher.id = Infinity
+    watcher.id = Infinity
     watcher.update = () => queueWatcher(watcher)
   } else {
     // pre
